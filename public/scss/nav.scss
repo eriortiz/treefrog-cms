@@ -2,7 +2,7 @@
   position: fixed;
   height: 80px;
   width: 100%;
-  background-color: #393c40;
+  background-color: $dark-color;
   display: flex;
 
   .left-nav-holder {
@@ -19,7 +19,7 @@
 
       a {
         margin-top: 31px;
-        color: #f2f2f2;
+        color: $white-color;
         text-decoration: none;
         text-transform: uppercase;
         display: block;
@@ -35,7 +35,7 @@
 
       .active {
         display: block;
-        background-color: #f2dcc9;
+        background-color: $vanilla-color;
       }
     }
   }

@@ -29,6 +29,10 @@ p {
   background-color: #393c40;
   color: #f2f2f2; }
 
+.btn-light {
+  background-color: #f2dcc9;
+  color: #393c40; }
+
 .modal {
   position: fixed;
   top: 0;
@@ -42,7 +46,19 @@ p {
     height: 350px;
     background-color: #393c40;
     margin: auto;
-    border-radius: 10px; }
+    border-radius: 10px;
+    color: #f2f2f2; }
+    .modal .alert-box-wrapper {
+      padding: 20px 25px; }
+    .modal .alert-box-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px; }
+    .modal .alert-box-btn-wrapper {
+      display: flex;
+      justify-content: center; }
 
 .nav {
   position: fixed;

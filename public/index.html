@@ -5,34 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Treefrog | CMS</title>
+    
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.8.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.8.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <nav class="nav">
       <div class="left-nav-holder">
-        <div class="link-holder">
+        <div class="link-holder" id="home">
           <a href="#">HOME</a>
           <div class="active-box active"></div>
         </div>
-        <div id="addNav" class="link-holder get-started">
+        <div class="link-holder get-started" id="addNav">
           <a href="#">add navigation</a>
           <div class="active-box"></div>
         </div>
-        <div id="editNav" class="link-holder">
+        <div class="link-holder" id="editNav">
           <a href="#">edit navigation</a>
           <div class="active-box"></div>
         </div>
-        <div id="deleteNav" class="link-holder">
+        <div class="link-holder" id="deleteNav">
           <a href="#">delete navigation</a>
           <div class="active-box"></div>
         </div>
       </div>
       <div class="right-nav-holder">
-        <a href="#">preview site</a>
+        <a href="#" id="preview">preview site</a>
       </div>
     </nav>
-
-    
 
     <div class="content-wrapper">
       <div class="text-wrapper">
@@ -61,17 +71,6 @@
     <div class="modal">
       <div class="alert-box"></div>
     </div>
-
-<!-- update the version number as needed -->
-<script defer src="/__/firebase/7.8.1/firebase-app.js"></script>
-<!-- include only the Firebase features as you need -->
-<script defer src="/__/firebase/7.8.1/firebase-auth.js"></script>
-<script defer src="/__/firebase/7.8.1/firebase-database.js"></script>
-<script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script>
-<script defer src="/__/firebase/7.8.1/firebase-messaging.js"></script>
-<script defer src="/__/firebase/7.8.1/firebase-storage.js"></script>
-<!-- initialize the SDK after all desired features are loaded -->
-<script defer src="/__/firebase/init.js"></script>
 
     <script src="lib/jquery.min.js"></script>
     <script src="app/service.js"></script>

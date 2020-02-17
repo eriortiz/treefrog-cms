@@ -29,4 +29,20 @@ function initButtons()
 
         initButtons();
     });
+
+    $(".main-nav").click(()=>
+    {
+        $(".modal").css("display","block");
+        $(".alert-box").html(TREEFROG_SERVICE.getCreateMainNavContent());
+
+        initButtons();
+    });
+
+    $(".sub-nav").click(()=>
+    {
+        $(".modal").css("display","block");
+        $(".alert-box").html(TREEFROG_SERVICE.getCreateSubNavContent());
+
+        initButtons();
+    });
 }
