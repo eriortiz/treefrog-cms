@@ -1,11 +1,11 @@
-$(document).ready(function()  
+$(document).ready(() => 
 {
     initButtons();
 })
 
 function initButtons()
 {
-    $(".get-started").click(function()
+    $(".get-started").click(() => 
     {
         $("#home div").removeClass("active");
         $("#addNav div").addClass("active");
@@ -13,13 +13,10 @@ function initButtons()
         $(".text-wrapper").html(TREEFROG_SERVICE.getGetStartedContent());
         $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavButtons());
 
-        mainNavButtonClick();
-        subNavButtonClick();
-
         initButtons();
     });
-    
-    $("#home").click(function() 
+
+    $("#home").click(() => 
     {
         $("#addNav div").removeClass("active");
         $("#home div").addClass("active");
