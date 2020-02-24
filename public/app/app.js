@@ -65,4 +65,11 @@ function startQuill()
       
         ['clean']                                         
       ];
-    }
+      
+      var quill = new Quill('#editor', {
+        modules: {
+            toolbar: toolbarOptions
+        },
+        theme: 'snow'
+    });
+}
