@@ -56,22 +56,44 @@ let TREEFROG_SERVICE = (() =>
     let _getCreateMainNavContent = ()=>
     {
         let content = `
-            <div class="alert-box-wrapper">
-            <div class="alert-box-text-wrapper">
-            <h2>Use this box to create navigation links</h2>
-            <p>You can create main navigation and sub navigation. To create sub-navigation you will need to first select a main nav and then create the sub nav.</p>
-            <p>Use the text box below to enter the name of your main navigation.</p>
-            <input placholder="Main Navigation">
-            </div>
-            <div class="alert-box-btn-wrapper">
-            <span class="btn btn-light">Create Sub Nav</span>
-            <span class="btn btn-light">Cancel</span>
-            </div>
-            </div>
+        <h1>Treefrog CMS </h1>
+        <p>Now you have your navigation set now you can create your content. Below you will see your navigation name and a text editor. Create your content in the text editor and then click on "Save Page Info". Once you have done that click on "PREVIEW SITE" to see what your web page looks like.</p>
+        <h4>Nav > <span class="cur-main-nav">Products</span> </h4>
+        <div id="editor"></div>
         `;
 
         return content;
     }
+
+    let _getCreateSubNavEditor = ()=>
+    {
+        let content = `
+        <h1>Treefrog CMS </h1>
+                <p>Now you have your navigation set now you can create your content. Below you will see your navigation name and a text editor. Create your content in the text editor and then click on "Save Page Info". Once you have done that click on "PREVIEW SITE" to see what your web page looks like.</p>
+                <h4>Nav > <span class="cur-main-nav">Products</span> > <span class="cur-sub-nav">Toys</span> </h4>
+                <div id="editor"></div>
+        `;
+
+        return content;
+    }
+
+    let _getCreateMainNavEditor = () => 
+    {
+        let buttonString = `
+            <span class="btn btn-dark main-nav">Create Main Nav</span>
+            <span class="btn btn-dark sub-nav">Create Sub Nav</span>
+        `;
+
+        return buttonString;
+    }
+
+    let _getCreateNavEditorButton = () => 
+    {
+        let button = `<span class="btn btn-dark">Save Page Info</span>`
+
+        return button;
+    };
+
 
     let _getCreateSubNavContent = ()=>
     {
@@ -97,7 +119,10 @@ let TREEFROG_SERVICE = (() =>
         return content;
     }
 
+   
+
     return {
+        getCreateNavEditorButton: _getCreateNavEditorButton,
         getGetStartedContent: _getGetStartedContent,
         getCreateNavButtons: _getCreateNavButtons,
         getHomeContent: _getHomeContent,
