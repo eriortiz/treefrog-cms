@@ -46,6 +46,17 @@ function initButtons()
     });
 }
 
+function createMainNavContent() {
+
+    $(".create-main-nav").click(() =>
+{
+$(".modal").css("display","none"); 
+
+$(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavContent());
+$(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
+});
+}
+
 function startQuill()
 {
     var toolbarOptions = [
@@ -67,15 +78,6 @@ function startQuill()
       
         ['clean']                                         
       ];
-
-
-      function createMainNavContent() {
-        $(".modal").css("display","none"); 
-
-     $(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavContent());
-     $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
-
-    }
 
       var quill = new Quill('#editor', {
         modules: {
