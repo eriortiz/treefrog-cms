@@ -33,6 +33,7 @@ function initButtons()
         $(".alert-box").html(TREEFROG_SERVICE.getCreateMainNavContent());
 
         createMainNavContent();
+        
 
         initButtons();
 
@@ -44,6 +45,8 @@ function initButtons()
         $(".modal").css("display","block");
         $(".alert-box").html(TREEFROG_SERVICE.getCreateSubNavContent());
 
+        createSubNavContent();
+
         initButtons();
     });
 }
@@ -52,11 +55,43 @@ function createMainNavContent() {
 
     $(".create-main-nav").click(() =>
 {
-$(".modal").css("display","none"); 
+    let checker = $("#checker").val();
+    if( checker == "")
+    {
+        alert("Need Navigation Name")
+        
+    }
+    else {
+        $(".modal").css("display","none"); 
 
-$(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavEditor());
-$(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
-startQuill();
+        $(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavEditor());
+        $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
+        startQuill();
+        
+    }
+
+});
+}
+
+function createSubNavContent() {
+
+    $(".create-sub-nav").click(() =>
+{
+    let checker = $("#checker").val();
+    if( checker == "")
+    {
+        alert("Need Navigation Name")
+        
+    }
+    else {
+        $(".modal").css("display","none"); 
+
+        $(".text-wrapper").html(TREEFROG_SERVICE.getCreateSubNavEditor());
+        $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
+        startQuill();
+        
+    }
+
 });
 }
 

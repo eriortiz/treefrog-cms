@@ -61,7 +61,7 @@ let TREEFROG_SERVICE = (() =>
             <h2>Use this box to create navigation links</h2>
             <p>You can create main navigation and sub navigation. To create sub-navigation you will need to first select a main nav and then create the sub nav.</p>
             <p>Use the text box below to enter the name of your main navigation.</p>
-            <input placeholder="Main Navigation">
+            <input placeholder="Main Navigation" id="checker">
             </div>
             <div class="alert-box-btn-wrapper">
             <span class="btn btn-light create-main-nav">Create Main Nav</span>
@@ -118,10 +118,10 @@ let TREEFROG_SERVICE = (() =>
                 <option selected>-----</option>
             </select>
             <p>Using the text box below enter the name of your sub navigations</p>
-            <input placholder="Sub Navigation">
+            <input placholder="Sub Navigation" id="checker">
             </div>
             <div class="alert-box-btn-wrapper">
-            <span class="btn btn-light">Create Sub Nav</span>
+            <span class="btn btn-light create-sub-nav">Create Sub Nav</span>
             <span class="btn btn-light cancel-nav">Cancel</span>
             </div>
             </div>
