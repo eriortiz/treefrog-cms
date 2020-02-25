@@ -64,7 +64,7 @@ let TREEFROG_SERVICE = (() =>
             <input placeholder="Main Navigation">
             </div>
             <div class="alert-box-btn-wrapper">
-            <span class="btn btn-light">Create Sub Nav</span>
+            <span class="btn btn-light create-main-nav">Create Main Nav</span>
             <span class="btn btn-light">Cancel</span>
             </div>
             </div>
@@ -97,17 +97,6 @@ let TREEFROG_SERVICE = (() =>
         return content;
     }
 
-
-
-    let _getCreateMainNavEditor = () => 
-    {
-        let buttonString = `
-            <span class="btn btn-dark main-nav">Create Main Nav</span>
-            <span class="btn btn-dark sub-nav">Create Sub Nav</span>
-        `;
-
-        return buttonString;
-    }
 
     let _getCreateNavEditorButton = () => 
     {
