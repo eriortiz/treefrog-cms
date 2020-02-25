@@ -52,7 +52,7 @@ function createMainNavContent() {
 {
 $(".modal").css("display","none"); 
 
-$(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavContent());
+$(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavEditor());
 $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
 });
 }
