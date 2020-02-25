@@ -55,7 +55,8 @@ function createMainNavContent() {
 
     $(".create-main-nav").click(() =>
 {
-    let checker = $("#checker").val();
+    let checker = $("#checker").val().toLowerCase();
+    console.log(checker);
     if( checker == "")
     {
         alert("Need Navigation Name")
@@ -77,7 +78,8 @@ function createSubNavContent() {
 
     $(".create-sub-nav").click(() =>
 {
-    let checker = $("#checker").val();
+    let checker = $("#checker").val().toLowerCase;
+    console.log(checker);
     if( checker == "")
     {
         alert("Need Navigation Name")
