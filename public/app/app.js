@@ -32,9 +32,11 @@ function initButtons()
         $(".modal").css("display","block");
         $(".alert-box").html(TREEFROG_SERVICE.getCreateMainNavContent());
 
+        createMainNavContent();
+
         initButtons();
 
-        createMainNavContent();
+        
     });
 
     $(".sub-nav").click(()=>
@@ -54,6 +56,7 @@ $(".modal").css("display","none");
 
 $(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNavEditor());
 $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
+startQuill();
 });
 }
 
