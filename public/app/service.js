@@ -100,7 +100,7 @@ let TREEFROG_SERVICE = (() =>
 
     let _getCreateNavEditorButton = () => 
     {
-        let button = `<span class="btn btn-dark">Save Page Info</span>`
+        let button = `<span class="btn btn-dark saveButton">Save Page Info</span>`
 
         return button;
     };

@@ -69,6 +69,7 @@ function createMainNavContent() {
         $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
         startQuill();
         
+        
     }
 
 });
@@ -91,6 +92,7 @@ function createSubNavContent() {
         $(".text-wrapper").html(TREEFROG_SERVICE.getCreateSubNavEditor());
         $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavEditorButton());
         startQuill();
+        
         
     }
 
@@ -125,4 +127,17 @@ function startQuill()
         },
         theme: 'snow'
     });
+    showQuillContent();
+}
+
+function showQuillContent(){
+
+    $(".saveButton").click(function(){
+console.log("Spider-Man")
+        
+        let justHTML = document.querySelector(".ql-editor").innerHTML;
+
+        $("#quill-content").html(justHTML);
+    });
+ 
 }
