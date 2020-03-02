@@ -1,4 +1,14 @@
 .ql {
+
+    &-toolbar{
+        width: calc(100% * (100 / 30));
+    }
+
+    &-container{
+        width: calc(100% * (100 / 30));
+        height: 300px;
+    }
+
  &-align{
     &-center{
         text-align: center;
