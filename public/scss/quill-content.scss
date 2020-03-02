@@ -9,6 +9,29 @@
         height: 300px;
     }
 
+    &-font{
+        &-monospace{
+            font-family: monospace;
+        }
+        &-serif{
+            font-family: serif;
+        }
+    }
+
+    &-size{
+        &-small{
+            font-size: 8px;
+        }
+
+        &-large{
+            font-size: 22px;
+        }
+
+        &-huge{
+            font-size: 32px;
+        }
+    }
+
  &-align{
     &-center{
         text-align: center;

@@ -114,6 +114,21 @@ p {
   width: calc(100% * (100 / 30));
   height: 300px; }
 
+.ql-font-monospace {
+  font-family: monospace; }
+
+.ql-font-serif {
+  font-family: serif; }
+
+.ql-size-small {
+  font-size: 8px; }
+
+.ql-size-large {
+  font-size: 22px; }
+
+.ql-size-huge {
+  font-size: 32px; }
+
 .ql-align-center {
   text-align: center; }
 
