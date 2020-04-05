@@ -46,7 +46,7 @@ function init() {
     let nName = $('#nav-input').val().trim().toLowerCase();
 
     if (nName != '') {
-      PRACTICE_SERVICE.checkPages(nName, alertUser);
+      PRACTICE_SERVICE.checkPages(nName);
       $('#nav-input').val('');
     } else {
       alert('add name');

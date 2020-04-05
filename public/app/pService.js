@@ -47,7 +47,7 @@ var PRACTICE_SERVICE = (function () {
       .then(function (docRef) {
         //remove loading screen
         console.log('Document written with ID: ', docRef.id);
-        callback('New navigation Added');
+        //callback('New navigation Added');
       })
 
       .catch(function (error) {
@@ -71,6 +71,7 @@ var PRACTICE_SERVICE = (function () {
             .then(function (querySnapshot) {
               if (querySnapshot.empty) {
                 console.log('add new name');
+                _addData(mainNavName);
               } else {
                 console.log('duplicate');
               }
