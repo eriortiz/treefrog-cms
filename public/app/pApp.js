@@ -1,9 +1,9 @@
 function deleteContentListener() {
   $('#deleteContent').click(function (e) {
-    var id = e.currentTarget.id;
-    var newNavName = $('#updateContent').val();
+    var oldNavName = $('#content').val();
+    $.each($('nav a'));
 
-    PRACTICE_SERVICE.updateContent(id, newNavName, displayData);
+    PRACTICE_SERVICE.deleteContent(id, displayData);
   });
 }
 
