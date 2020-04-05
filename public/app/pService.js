@@ -4,7 +4,7 @@ var PRACTICE_SERVICE = (function () {
 
   var _getAllData = function (callback) {
     _db
-      .collection('pages')
+      .collection('Pages')
       .get()
       .then(function (querySnapshot) {
         callback(querySnapshot);
