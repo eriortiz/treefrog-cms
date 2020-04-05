@@ -1,5 +1,50 @@
 let TREEFROG_SERVICE = (() => 
 {
+
+    document.addEventListener("DOMContentLoaded", function() 
+    { 
+        // // :fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire: 
+        // // The Firebase SDK is initialized and available here! 
+        // // firebase.auth().onAuthStateChanged(user => {}); 
+        // firebase 
+        // .database() 
+        // .ref('/contacts') 
+        // .on('value', snapshot => {}); 
+        // firebase.firestore().collection('contacts'); 
+        // firebase.messaging().requestPermission().then(() => { }); 
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { }); 
+        // 
+        // // :fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire::fire: 
+        try 
+        { 
+            let app = firebase.app();
+            let features = ["auth", "database", "messaging", "storage"].filter( 
+                feature => typeof app[feature] === "function" );
+        } catch (e) 
+        { 
+            console.error(e); 
+        } 
+    });
+
+var _addContact = function(){
+    _db.collection('contacts') 
+    .add(data) 
+    .then(function(docRef) { 
+        console.log('Document written with ID: ', docRef.id); 
+    }) .catch(function(error) { 
+        console.error('Error adding document: ', error); 
+    });
+}
+
+ let _initFirebase = ()=>
+{ 
+    firebase 
+    .auth() 
+    .signInAnonymously() 
+    .then(function(result) { 
+        console.log('connected')
+        _db = firebase.firestore(); });}
+
     let _getGetStartedContent = () => 
     {
         let contentStr = `
