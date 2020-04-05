@@ -6,29 +6,46 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="nav-input" />
+    <input placeholder="Add" type="text" id="nav-input" />
     <button id="addData">Add Data</button>
     <p>Get Data</p>
     <button class="getData">Get Data</button>
     <div class="showData"></div>
-    <button id="checkPages">CheckPages</button>
 
     <div>
-      <input type="text" id="updateContent" />
+      <input placeholder="Update" type="text" id="updateContent" />
     </div>
     <div>
-      <input type="text" id="content" />
+      <input placeholder="Delete" type="text" id="content" />
       <button id="deleteContent">Delete</button>
     </div>
 
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.8.1/firebase-app.js"></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"
+    ></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.8.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-storage.js"></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/firebase-database.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/firebase-firestore.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/firebase-messaging.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/firebase-storage.js"
+    ></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
