@@ -64,6 +64,7 @@ var PRACTICE_SERVICE = (function () {
       .then(function (querySnapshot) {
         if (querySnapshot.empty) {
           console.log('empty ', querySnapshot.empty);
+          _addData(mainNavName);
         } else {
           pages
             .where('navName', '==', 'mainNavName')
