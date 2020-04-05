@@ -61,6 +61,6 @@ function init() {
 }
 
 $(document).ready(function () {
-  alert('alert');
+  console.log('alert');
   PRACTICE_SERVICE.initFirebase(init);
 });

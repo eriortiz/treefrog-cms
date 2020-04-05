@@ -91,7 +91,7 @@ var PRACTICE_SERVICE = (function () {
       .signInAnonymously()
       .then(function (result) {
         console.log('connected');
-        _db = firebase.firestone();
+        _db = firebase.firestore();
         callback();
       });
   };
