@@ -36,6 +36,7 @@ function displayData(addData) {
 }
 
 function init() {
+  console.log('Firebase Connected');
   $('.getData').click(function (e) {
     PRACTICE_SERVICE.getAllData(displayData);
   });
@@ -61,5 +62,5 @@ function init() {
 
 $(document).ready(function () {
   alert('alert');
-  PRACTICE_SERVICE.initFirebase();
+  PRACTICE_SERVICE.initFirebase(init);
 });
