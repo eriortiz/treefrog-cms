@@ -1,7 +1,12 @@
 function deleteContentListener() {
   $('#deleteContent').click(function (e) {
+    var id;
     var oldNavName = $('#content').val();
-    $.each($('nav a'));
+    $.each($('nav a'), function (index, link) {
+      if ((oldNavName = link.innerHTML)) {
+        id = link.id;
+      }
+    });
 
     PRACTICE_SERVICE.deleteContent(id, displayData);
   });
@@ -27,6 +32,7 @@ function displayData(addData) {
   container += '</nav>';
   $('.showData').html(container);
   addNavListener();
+  deleteContentListener();
 }
 
 function init() {
