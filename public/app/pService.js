@@ -102,5 +102,6 @@ var PRACTICE_SERVICE = (function () {
     addData: _addData,
     getAllData: _getAllData,
     updateContent: _updateData,
+    deleteContent: _deleteData,
   };
 })();

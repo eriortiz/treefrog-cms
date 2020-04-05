@@ -1,3 +1,12 @@
+function deleteContentListener() {
+  $('#deleteContent').click(function (e) {
+    var id = e.currentTarget.id;
+    var newNavName = $('#updateContent').val();
+
+    PRACTICE_SERVICE.updateContent(id, newNavName, displayData);
+  });
+}
+
 function addNavListener() {
   $('nav a').click(function (e) {
     var id = e.currentTarget.id;
