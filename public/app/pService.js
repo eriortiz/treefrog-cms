@@ -2,26 +2,35 @@ var PRACTICE_SERVICE = (function () {
   var _db;
   var _currentPageID;
 
-  var _getAllData = function(callback) {
+  var _getAllData = function (callback) {
     _db
-      .collection("pages")
+      .collection('pages')
       .get()
-      .then(function(querySnapshot) {
+      .then(function (querySnapshot) {
         callback(querySnapshot);
       });
   };
 
-  var _updateData = function(id, newContent, callback) {
+  var _updateData = function (id, newContent, callback) {
     var newObj = { navName: newContent };
-  
 
-  _db
-    .collection("Pages")
-    .doc(id)
-    .update(newObj)
-    .then(funtion() {
-      _getAllData(callback);
-    });
+    _db
+      .collection('Pages')
+      .doc(id)
+      .update(newObj)
+      .then(function () {
+        _getAllData(callback);
+      });
+  };
+
+  var _deleteData = function (id, callback) {
+    _db
+      .collection('Pages')
+      .doc(id)
+      .delete()
+      .then(function () {
+        _getAllData(callback);
+      });
   };
 
   var _addData = function (navName, callback) {
@@ -92,6 +101,6 @@ var PRACTICE_SERVICE = (function () {
     checkPages: _checkPages,
     addData: _addData,
     getAllData: _getAllData,
-    updateContent: _updateData
+    updateContent: _updateData,
   };
 })();
